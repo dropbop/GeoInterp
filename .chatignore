@@ -29,3 +29,36 @@ pnpm-debug.log*
 
 # docs (optional): keep README if it's short; otherwise skip
 # **/*.md
+Never send deps or built output
+
+node_modules/
+dist/
+
+Big, noisy, or generated
+
+**/.d.ts
+**/.map
+*.tsbuildinfo
+coverage/
+.vite/
+.turbo/
+
+Binary / media
+
+**/.png
+**/.jpg
+**/.jpeg
+**/.gif
+**/.svg
+**/.webp
+**/*.ico
+
+Package manager detritus
+
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+Large samples (only include manually if strictly required)
+
+example.json
