@@ -1,0 +1,88 @@
+:root {
+  --bg: #0b0d10;
+  --panel: #11151a;
+  --text: #e7ecef;
+  --muted: #9aa4ad;
+  --accent: #4da3ff;
+  --good: #2ecc71;
+  --bad: #e74c3c;
+}
+
+* { box-sizing: border-box; }
+
+body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+#app { display: flex; flex-direction: column; }
+
+.topbar {
+  background: var(--panel);
+  border-bottom: 1px solid #1b2128;
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 14px 18px;
+  align-items: baseline;
+}
+
+.summary .label { color: var(--muted); margin-right: 4px; }
+.summary .val { color: var(--text); font-weight: 600; }
+
+.controls { display: flex; gap: 8px; align-items: center; }
+button, .file-input-label {
+  background: #18202a;
+  color: var(--text);
+  border: 1px solid #223041;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+button:hover, .file-input-label:hover { background: #1b2734; }
+
+.toggle { display: inline-flex; gap: 6px; align-items: center; }
+select { background: #18202a; color: var(--text); border: 1px solid #223041; border-radius: 6px; padding: 6px; }
+
+.dropzone {
+  border: 1px dashed #35506e;
+  background: #10161d;
+  color: var(--muted);
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+}
+.dropzone.dragover { border-color: var(--accent); color: var(--text); }
+
+#map { flex: 1; min-height: 60vh; }
+
+.legend {
+  background: rgba(17, 21, 26, 0.95);
+  padding: 8px 10px;
+  border: 1px solid #223041;
+  color: var(--text);
+  border-radius: 6px;
+}
+.legend .bar { height: 10px; width: 160px; background: linear-gradient(90deg, #2b83ba, #abdda4, #fdae61, #d7191c); margin: 6px 0; border-radius: 3px; }
+.legend .scale { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+
+.leaflet-popup-content { color: #000; }
+
+.marker-label {
+  background: #fff;
+  border: 1px solid #999;
+  color: #000;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-weight: 700;
+}
+
+.arrow-icon {
+  width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; text-shadow: 0 0 2px #000; transform-origin: center; }
+
+.hidden { display: none; }
+
